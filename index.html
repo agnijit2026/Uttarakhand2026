@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mumbai → Mussoorie → Mumbai · 8–15 Nov 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#181d26;--body:#333840;--muted:#41454d;--hl:#ddd;--soft:#f8fafc;--strong:#e0e2e6;--link:#1b61c9;--btn:#181d26;--btnt:#fff;--cr:#f5e9d4;--crc:#fff;--pi:#181d26;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1218;--ink:#f3f4f6;--body:#c9ced6;--muted:#a3a9b3;--hl:#2c313a;--soft:#161a21;--strong:#222731;--link:#7aa9f7;--btn:#fff;--btnt:#181d26;--cr:#1d1b17;--crc:#26231e}}
+:root[data-theme="dark"]{--bg:#0f1218;--ink:#f3f4f6;--body:#c9ced6;--muted:#a3a9b3;--hl:#2c313a;--soft:#161a21;--strong:#222731;--link:#7aa9f7;--btn:#fff;--btnt:#181d26;--cr:#1d1b17;--crc:#26231e}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{font:400 14px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;color:var(--body);background:var(--bg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.w{max-width:1280px;margin:auto;padding:0 clamp(16px,4vw,48px)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);height:64px;background:var(--bg);border-bottom:1px solid var(--hl);z-index:20}
+nav .w{display:flex;align-items:center;gap:20px;height:64px}
+nav b{font-weight:500;font-size:16px;color:var(--ink);white-space:nowrap}
+nav .l{display:flex;gap:18px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav a{color:var(--body);text-decoration:none;white-space:nowrap}
+section{padding:clamp(48px,8vw,96px) 0}
+.soft{background:var(--soft)}.cream{background:var(--cr)}
+h1{font:400 clamp(30px,5.4vw,40px)/1.2 Inter,sans-serif;color:var(--ink);max-width:18em}
+h2{font:400 clamp(24px,4vw,32px)/1.2 Inter,sans-serif;color:var(--ink);margin-bottom:8px}
+h3{font:500 18px/1.4 Inter,sans-serif;color:var(--ink)}
+.lead{font-size:16px;max-width:42em;margin:16px 0 0;color:var(--body)}
+.sub{margin-bottom:32px;max-width:44em}
+.btn{display:inline-block;padding:14px 24px;border-radius:12px;font:500 16px/1.4 Inter,sans-serif;background:var(--btn);color:var(--btnt);border:1px solid var(--btn);cursor:pointer;text-decoration:none}
+.btn.s{background:var(--bg);color:var(--ink);border-color:var(--hl)}
+.btn:active{opacity:.75}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.stat{background:var(--cr);color:var(--ink);border-radius:10px;padding:24px}
+.stat b{display:block;font:400 32px/1.2 Inter,sans-serif;color:var(--ink)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:24px;padding-bottom:2px}
+.tab{padding:10px 16px;border-radius:12px;border:1px solid var(--hl);background:var(--bg);color:var(--ink);font:500 14px Inter,sans-serif;white-space:nowrap;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--btn);color:var(--btnt);border-color:var(--btn)}
+.sig{border-radius:12px;padding:clamp(24px,5vw,48px);color:#fff}
+.sig h2,.sig h3{color:#fff}.sig .tab{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.sig .tab[aria-pressed=true]{background:#fff;color:#181d26;border-color:#fff}
+.coral{background:#aa2d00}.dark{background:#181d26;border:1px solid #2c313a}.forest{background:#0a2e0e}
+.leg{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.leg .t{font:400 clamp(28px,6vw,40px)/1.1 Inter,sans-serif}
+.leg small{display:block;opacity:.85}.leg .m{text-align:center;opacity:.9}.leg .e{text-align:right}
+.lay{padding:12px 16px;border-radius:10px;background:rgba(255,255,255,.14);margin:16px 0}
+.kv{display:grid;gap:16px 24px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:24px}
+.kv span{display:block;opacity:.8;font-size:13px}.kv b{font-weight:500;font-size:16px;word-break:break-word}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.day{margin-bottom:24px}.day>h3{margin-bottom:8px}
+details{background:var(--bg);border:1px solid var(--hl);border-radius:10px;margin-bottom:8px}
+summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;gap:16px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary .tm{min-width:86px;color:var(--muted)}summary b{font-weight:500;color:var(--ink);display:block}
+summary:focus-visible,.tab:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid #458fff;outline-offset:2px}
+details p{padding:0 16px 14px 118px;color:var(--body)}
+.k{font-size:12px;font-weight:500;padding:2px 8px;border-radius:9999px;margin-left:auto;color:#181d26;align-self:center;white-space:nowrap}
+.pc{background:#fcab79}.pm{background:#a8d8c4}.py{background:#f4d35e}.pu{background:#d9a441}
+.card{border-radius:10px;padding:24px;color:var(--pi)}.card h3{color:var(--pi);margin-bottom:4px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:16px}.card dt{opacity:.75}.card dd{font-weight:500;word-break:break-word}
+.card .due{margin-top:16px;padding-top:12px;border-top:1px solid rgba(24,29,38,.25);font-weight:500}
+.cc{background:var(--crc);border-radius:10px;padding:24px;margin-bottom:16px;color:var(--ink)}
+.stops{display:grid;gap:8px;margin-top:12px}.stop{display:flex;gap:16px;padding:10px 0;border-top:1px solid var(--hl)}.stop .tm{min-width:76px;color:var(--muted)}
+.tw{overflow-x:auto;border:1px solid var(--hl);border-radius:10px;background:var(--bg)}
+table{width:100%;border-collapse:collapse;min-width:640px}th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--hl)}
+th{color:var(--muted);font-weight:500}td:first-child{color:var(--ink);font-weight:500}tr.done td{opacity:.5;text-decoration:line-through}
+.tot td{font-weight:500;color:var(--ink);border:0}
+input[type=checkbox]{width:20px;height:20px;accent-color:#181d26}
+.hu{display:grid;gap:12px;margin-top:24px;padding:0;list-style:none}.hu li{padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.1)}
+footer{padding:48px 0;color:var(--muted);font-size:13px}
+@media(max-width:640px){summary{flex-wrap:wrap;gap:4px 12px}details p{padding-left:16px}.k{margin-left:0}.leg{grid-template-columns:1fr 1fr}.leg .m{grid-row:2;grid-column:1/3;text-align:left}}
+.art{width:100%;height:clamp(140px,26vw,260px);border-radius:12px;display:block;margin-top:48px}.route{background:var(--bg);border:1px solid var(--hl);border-radius:12px;padding:16px;overflow-x:auto;margin:24px 0;color:var(--ink)}.route svg{min-width:720px;width:100%;display:block}.route p{font-size:13px;color:var(--muted)}.nb{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:24px}.nb span{flex:1 1 auto;min-width:56px;padding:10px 8px;border-radius:10px;color:#181d26;font-size:12px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.nb b{font:400 20px Inter,sans-serif}#pb span{min-width:100px}.ban{display:block;width:calc(100% + 48px);height:70px;margin:-24px -24px 16px;border-radius:10px 10px 0 0}.em{font-size:30px;margin-bottom:8px;letter-spacing:6px}.m svg{display:block;margin:4px auto}@media print{nav,.row{display:none}}
+</style></head><body>
+<nav><div class="w"><b>Tarafdar trip</b><div class="l"><a href="#plan">Timeline</a><a href="#flights">Flights</a><a href="#stays">Stays</a><a href="#cabs">Cabs</a><a href="#days">Day plans</a><a href="#pay">Payments</a><a href="#notes">Heads-up</a></div><button class="btn s" style="padding:8px 16px;font-size:14px" onclick="print()">Print</button></div></nav>
+
+<section><div class="w">
+<h1>Mumbai to Mussoorie, then home via Dehradun</h1>
+<p class="lead">8–15 November 2026 for Agnijit, Swagata and Sagnik Tarafdar. Every flight, stay and cab from your tickets, with booking IDs and what is still due.</p>
+<div class="row"><a class="btn" href="#plan">See the timeline</a><a class="btn s" href="#pay">Check payments</a></div>
+<svg class="art" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of Himalayan foothills"><rect width="1200" height="260" fill="#f5e9d4"/><circle cx="930" cy="80" r="46" fill="#fcab79"/><path d="M40 90Q120 50 196 62" stroke="#181d26" stroke-dasharray="5 6" fill="none"/><path d="M200 50l60 14-60 14 12-14z" fill="#181d26"/><path d="M0 260V150l120-70 140 80 130-100 160 120 150-90 170 110 140-80 190 100v40z" fill="#a8d8c4"/><path d="M0 260V190l140-60 120 60 160-80 150 90 170-70 140 70 180-60 140 60v60z" fill="#0a2e0e"/><path d="M0 260V230l100-30 140 30 200-40 180 40 220-30 160 30 200-20v50z" fill="#181d26"/></svg>
+<div class="route"><div id="rt"></div><p>Dashed leg: no Mussoorie to Dehradun cab is in your files.</p></div>
+<div class="grid" id="stats"></div>
+</div></section>
+
+<section class="soft" id="plan"><div class="w">
+<h2>Day-by-day timeline</h2><p class="sub">Tap any item for booking IDs and details.</p>
+<div class="chips" id="flt"></div><div id="tl"></div>
+</div></section>
+
+<section id="flights"><div class="w"><div class="sig coral">
+<h2>Flights</h2><p class="sub">Carry photo ID. Check-in counters close 60 minutes before departure.</p>
+<div class="tabs" id="ft"></div><div id="fb"></div>
+</div></div></section>
+
+<section class="soft" id="stays"><div class="w">
+<h2>Where you’re staying</h2><p class="sub">Six nights are booked across three hotels, plus a Gurugram drop-off on 14 Nov.</p>
+<div class="nb"><span class="pc" style="flex:1">Delhi<br><b>1</b></span><span class="pm" style="flex:3">Mussoorie<br><b>3</b></span><span class="py" style="flex:2">Dehradun<br><b>2</b></span><span class="pu" style="flex:1">Gurugram<br><b>1</b></span></div>
+<div class="grid" id="sg"></div>
+</div></section>
+
+<section id="cabs"><div class="w"><div class="sig dark">
+<h2>Cab transfers</h2><p class="sub">Driver and vehicle details appear in My Trips 30 minutes before pickup.</p>
+<div class="tabs" id="ct"></div><div id="cb"></div>
+</div></div></section>
+
+<section class="cream" id="days"><div class="w">
+<h2>Sightseeing plans</h2><p class="sub">From your Mussoorie and Dehradun itineraries. Mussoorie days are assumed to be 10 and 11 Nov.</p>
+<div class="tabs" id="it"></div><div id="ib"></div>
+</div></section>
+
+<section id="pay"><div class="w">
+<h2>Payments</h2><p class="sub">Tick items as you settle them. Ticks are saved in this browser only.</p>
+<div class="nb" id="pb"></div>
+<div class="tw"><table><thead><tr><th></th><th>Booking</th><th>Total</th><th>Paid</th><th>Balance</th><th>Pay to / when</th></tr></thead><tbody id="pt"></tbody></table></div>
+</div></section>
+
+<section class="soft" id="notes"><div class="w"><div class="sig forest">
+<h2>Things to sort out</h2><p class="sub" style="margin-bottom:0">Gaps and clashes spotted across your documents.</p>
+<ul class="hu" id="hu"></ul>
+</div></div></section>
+
+<footer><div class="w">Built from your uploaded MakeMyTrip, Cleartrip and Perfectstayz confirmations. Support: MakeMyTrip (0124) 462 8747 · Akasa Air via Cleartrip +91 9595 333 333 · IndiGo 0124-6173838 · Perfectstayz +91 73 5315 0111.</div></footer>
+
+<script>
+const $=s=>document.querySelector(s),esc=x=>x;
+const KN={flight:["✈ Flight","pc"],stay:["🛏 Stay","pm"],cab:["🚗 Cab","py"],plan:["📍 Plan","pu"]};const IE=["💧🌷🚡🌇","🏔️🥞⛪🏡","🕳️♨️🏛️","🛕🏯🦌"];
+const EV=[
+["Sun 8 Nov","13:00","flight","Mumbai to Delhi · Akasa Air QP 1113","Terminal 2 to Terminal 1, lands 15:20","PNR J6EJPP · Cleartrip Trip ID 260907745228 · Saver, Economy · 15 kg check-in + 7 kg cabin per person."],
+["Sun 8 Nov","From 12:00","stay","Check in · Hotel Volga Deluxe, Mahipalpur","Family Suite, 2 king beds, balcony","Booking NH27193514856298 · Check-out Mon 9 Nov before 11:00. Pay ₹1,731 by 6 Nov 11:59 PM."],
+["Mon 9 Nov","10:30","cab","Cab · Delhi to Mussoorie","Xylo, Ertiga or similar (CNG) · arrive 15:49","Booking NC733270642774582332 · 271 km included · pay driver ₹3,957."],
+["Mon 9 Nov","From 13:00","stay","Check in · Perfectstayz Premium Seven Oaks","Executive Room, balcony, hill view · 3 nights","Reservation TAD1ZE · Camels Back Road, The Mall Road · breakfast included."],
+["Tue 10 Nov","08:30","plan","Mussoorie day 1 · Kempty Falls, Company Garden","Cab 8:30–13:30, then Gun Hill and Mall Road on foot","Details in Sightseeing plans."],
+["Wed 11 Nov","08:30","plan","Mussoorie day 2 · Lal Tibba, Char Dukan, Everest Estate","Cab 8:30–13:30, then free afternoon","Details in Sightseeing plans."],
+["Thu 12 Nov","By 11:00","stay","Check out Seven Oaks, move to Dehradun","Perfectstayz Premium Aurevva · check-in from 13:00","Reservation SHMEUX · 2 nights · no Mussoorie to Dehradun cab found in your files."],
+["Thu 12 Nov","09:30","plan","Dehradun day 1 · Robber’s Cave, Sahastradhara, FRI","Cab 9:00–15:00 in the plan","See heads-up: this clashes with the transfer day."],
+["Fri 13 Nov","09:30","plan","Dehradun day 2 · Tapkeshwar, Mindrolling, Malsi Deer Park","Cab 9:00–15:00","Details in Sightseeing plans."],
+["Sat 14 Nov","09:30","cab","Cab · Dehradun to Gurugram","Dzire or similar (diesel) · arrive 14:35","Booking NCI32478387435022154 · 300 km included · pay driver ₹3,574. Aurevva check-out 11:00."],
+["Sat 14 Nov","Afternoon","stay","Drop at Art Luxury Service Apartment, Sector 27, Gurugram","Stay booking not in your files","Confirm where you sleep on the night of 14 Nov."],
+["Sun 15 Nov","17:15","flight","Delhi to Navi Mumbai · IndiGo 6E 5116 + 6E 6093","Via Chhatrapati Sambhajinagar · lands 21:55","PNR TBRVGW · Booking NF7ANGEJ80493131355 · departs Terminal 3."]];
+const FL=[
+{t:"8 Nov · Mumbai to Delhi",legs:[["Akasa Air QP 1113","BOM","Mumbai Chhatrapati Shivaji, T2","13:00","DEL","Delhi Indira Gandhi, T1","15:20","2h 20m"]],lay:"",
+kv:[["PNR","J6EJPP"],["Cleartrip Trip ID","260907745228"],["Fare","Saver · Economy"],["Baggage","15 kg check-in + 7 kg cabin, 1 piece each"],["Travellers","Agnijit, Sagnik, Swagata"],["Total fare","₹22,599"],["Support","+91 9595 333 333"]]},
+{t:"15 Nov · Delhi to Navi Mumbai",legs:[["IndiGo 6E 5116","DEL","Delhi Indira Gandhi, T3","17:15","IXU","Chhatrapati Sambhajinagar","19:05","1h 50m"],["IndiGo 6E 6093","IXU","Chhatrapati Sambhajinagar","21:00","NMI","Navi Mumbai International","21:55","55m"]],lay:"1h 55m layover at Chhatrapati Sambhajinagar (IXU), change of planes",
+kv:[["PNR","TBRVGW"],["Booking ID","NF7ANGEJ80493131355"],["Fare","MMT Special · Economy"],["Baggage","15 kg check-in + 7 kg cabin, 1 piece each"],["Travellers","Agnijit, Swagata, Sagnik"],["Total paid","₹23,514 (HDFC card)"],["Support","IndiGo 0124-6173838"]]}];
+const ST=[
+{n:"Hotel Volga Deluxe",c:"pc",s:"New Delhi · 3-star",d:[["Dates","8–9 Nov (1 night)"],["Room","Family Suite, 2 king beds, balcony, room only"],["Check-in/out","After 12:00 / before 11:00"],["Booking ID","NH27193514856298"],["Address","A-25 Road No-2, Mahipalpur, New Delhi 110037"],["Phone","9971369185"],["Extra","₹499 cleaning fee at property"]],due:"Balance ₹1,731, pay by 6 Nov 11:59 PM IST"},
+{n:"Perfectstayz Premium Seven Oaks",c:"pm",s:"Mussoorie",d:[["Dates","9–12 Nov (3 nights)"],["Room","Executive, 280 sq ft, balcony, hill view, breakfast"],["Check-in/out","13:00 / 11:00"],["Reservation","TAD1ZE"],["Address","Camels Back Road, The Mall Road, 248179"],["Phone","+91 73 5315 0111"],["Total","₹13,500 (paid ₹4,000)"]],due:"Balance ₹9,500 at the hotel"},
+{n:"Perfectstayz Premium Aurevva",c:"py",s:"Dehradun",d:[["Dates","12–14 Nov (2 nights)"],["Room","Deluxe, 180 sq ft, balcony, hill view, breakfast"],["Check-in/out","13:00 / 11:00"],["Reservation","SHMEUX"],["Address","Mussoorie Road, near DIT College, Salan Gaon, Dehradun 248009"],["Phone","+91 73 5315 0111"],["Total","₹5,500 (paid ₹1,600)"]],due:"Balance ₹3,900 at the hotel"},
+{n:"Art Luxury Service Apartment",c:"pu",s:"Gurugram, Sector 27 · drop-off only",d:[["Date","14 Nov"],["Status","No stay booking in your files"],["Source","Cab drop-off address"]],due:"Confirm this stay"}];
+const CB=[
+{t:"9 Nov · Delhi to Mussoorie",kv:[["Pickup","Mon 9 Nov, 10:30, Hotel Volga Deluxe"],["Drop","Perfectstayz Seven Oaks, Mall Road, ~15:49"],["Cab","Xylo, Ertiga or similar · SUV · CNG"],["Booking ID","NC733270642774582332"],["Plan","One way, 271 km included, ₹18/km after"],["Pay driver","₹3,957 (total ₹5,002, paid ₹1,045)"],["Waiting","Free 45 min, then ₹100 per 30 min"],["Free cancel","Until 9 Nov 09:30"]],n:"CNG boot space is small, and an SUV fits 3 bags. A CNG refill can add 30+ minutes. AC is off in hilly areas."},
+{t:"14 Nov · Dehradun to Gurugram",kv:[["Pickup","Sat 14 Nov, 09:30, Perfectstayz Aurevva"],["Drop","Art Luxury Service Apartment, Sector 27, Gurugram, ~14:35"],["Cab","Dzire or similar · sedan · diesel"],["Booking ID","NCI32478387435022154"],["Plan","One way, 300 km included, ₹22/km after"],["Pay driver","₹3,574 (total ₹4,541, paid ₹967)"],["Waiting","Free 30 min, then ₹300 per hour"],["Free cancel","Until 14 Nov 08:30"]],n:"A sedan fits 2 bags, so check luggage for three people. Driver waits 30 minutes at most."}];
+const IT=[
+{t:"Mussoorie day 1",h:"Kempty Cascades and the Western circuit",c:"Cab 8:30–13:30, then on foot",s:[["8:30","Drive to Kempty Falls, ~15 km"],["9:15","Kempty Falls: pool and cable car"],["11:30","Company Garden: flowerbeds and boating lake"],["13:30","Lunch at Kalsang Friends Corner or Café De Tavern"],["14:30","Gun Hill ropeway from Jhula Ghar"],["16:30","Camel’s Back Road sunset walk (3 km)"],["18:30","Mall Road: souvenirs, Chic Chocolate"]]},
+{t:"Mussoorie day 2",h:"Landour heritage and Everest Estate",c:"Cab 8:30–13:30; a hatchback or sedan suits Landour’s lanes",s:[["8:30","Drive to Lal Tibba, ~6 km"],["9:00","Lal Tibba: snow peaks through binoculars"],["9:45","Char Dukan and St. Paul’s Church"],["11:45","Sir George Everest Estate and ridge views"],["13:30","Late lunch near Mall Road"],["15:00","Shopping and cafés"],["18:00","Dinner at the hotel terrace or Mall Road"]]},
+{t:"Dehradun day 1 · Thu 12 Nov",h:"Caves, springs and forest",c:"Cab 9:00–15:00",s:[["9:30","Robber’s Cave, 75 min (wear wet-proof shoes)"],["11:10","Sahastradhara, 95 min, ropeway, snack lunch"],["13:20","Forest Research Institute, 60 min"],["Evening","Paltan Bazaar, Clock Tower, dinner on Rajpur Road"]]},
+{t:"Dehradun day 2 · Fri 13 Nov",h:"Temple, monastery and deer park",c:"Cab 9:00–15:00",s:[["9:30","Tapkeshwar Mahadev, 75 min"],["11:15","Mindrolling Monastery, 90 min, lunch nearby"],["13:30","Malsi Deer Park, 50 min"],["Evening","Rajpur Road cafés and a farewell dinner"]]}];
+const PY=[
+["Hotel Volga Deluxe",1731,0,"Pay online via MakeMyTrip before 6 Nov 11:59 PM"],
+["Cab Delhi to Mussoorie",5002,1045,"Driver, 9 Nov (extra km and waiting on top)"],
+["Seven Oaks, Mussoorie",13500,4000,"Hotel, later"],
+["Aurevva, Dehradun",5500,1600,"Hotel, later"],
+["Cab Dehradun to Gurugram",4541,967,"Driver, 14 Nov (extra km and waiting on top)"]];
+const HU=[
+"Gurugram on 14 Nov: the cab drops you at Art Luxury Service Apartment, but no stay booking was uploaded.",
+"12 Nov transfer: no Mussoorie to Dehradun cab is in your files. Seven Oaks check-out is 11:00 and Aurevva check-in is 13:00, yet the Dehradun plan starts at 9:00 that day.",
+"Volga Deluxe needs ₹1,731 paid by 6 Nov 11:59 PM IST or it auto-cancels. Free cancellation ends 7 Nov 11:59 AM.",
+"Your return flight lands at Navi Mumbai (NMI), not Mumbai’s main airport.",
+"14 Nov sedan fits 2 bags in the cab’s luggage policy, with three travellers.",
+"Both Perfectstayz hotels charge in full for cancellations within 10 days of arrival."];
+const inr=n=>"₹"+n.toLocaleString("en-IN");
+const tabs=(id,arr,fn,cur=0)=>{const el=$(id);el.innerHTML=arr.map((a,i)=>`<button class="tab" aria-pressed="${i==cur}" data-i="${i}">${a}</button>`).join("");el.onclick=e=>{const b=e.target.closest("button");if(!b)return;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x==b));fn(+b.dataset.i)}};
+const days=Math.ceil((new Date(2026,10,8)-Date.now())/864e5);
+$("#stats").innerHTML=[[days>0?days+" days":"On now","until you fly from Mumbai"],["7 nights","Delhi 1 · Mussoorie 3 · Dehradun 2 · Gurugram 1"],["3 travellers","Agnijit, Swagata, Sagnik"],["4 flights, 2 cabs","3 hotel bookings"]].map(a=>`<div class="stat"><b>${a[0]}</b>${a[1]}</div>`).join("");
+let f="all";
+const tl=()=>{const g={};EV.filter(e=>f=="all"||e[2]==f).forEach(e=>(g[e[0]]=g[e[0]]||[]).push(e));$("#tl").innerHTML=Object.keys(g).map(d=>`<div class="day"><h3>${d}</h3>${g[d].map(e=>`<details><summary><span class="tm">${e[1]}</span><span><b>${e[3]}</b>${e[4]}</span><span class="k ${KN[e[2]][1]}">${KN[e[2]][0]}</span></summary><p>${e[5]}</p></details>`).join("")}</div>`).join("")};
+$("#flt").innerHTML=[["all","All"],["flight","Flights"],["stay","Stays"],["cab","Cabs"],["plan","Sightseeing"]].map((a,i)=>`<button class="tab" aria-pressed="${i==0}" data-f="${a[0]}">${a[1]}</button>`).join("");
+$("#flt").onclick=e=>{const b=e.target.closest("button");if(!b)return;$("#flt").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x==b));f=b.dataset.f;tl()};tl();
+const kv=a=>`<div class="kv">${a.map(x=>`<div><span>${x[0]}</span><b>${x[1]}</b></div>`).join("")}</div>`;
+const fl=i=>{const o=FL[i];$("#fb").innerHTML=o.legs.map((l,j)=>`${j&&o.lay?`<div class="lay">${o.lay}</div>`:""}<div class="leg"><div><div class="t">${l[3]}</div><b>${l[1]}</b><small>${l[2]}</small></div><div class="m">${l[0]}<svg viewBox="0 0 120 20" width="120" height="20" aria-hidden="true"><path d="M4 10H116" stroke="#fff" stroke-dasharray="4 4" opacity=".7"/><text x="52" y="16" font-size="16" fill="#fff">✈</text></svg><small>${l[7]}</small></div><div class="e"><div class="t">${l[6]}</div><b>${l[4]}</b><small>${l[5]}</small></div></div>`).join("")+kv(o.kv)};
+tabs("#ft",FL.map(x=>x.t),fl);fl(0);
+$("#sg").innerHTML=ST.map((s,i)=>`<div class="card ${s.c}">${ban(i)}<h3>${s.n}</h3>${s.s}<dl>${s.d.map(x=>`<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join("")}</dl><div class="due">${s.due}</div></div>`).join("");
+const cb=i=>{const o=CB[i];$("#cb").innerHTML=kv(o.kv)+`<div class="lay">${o.n}</div>`};
+tabs("#ct",CB.map(x=>x.t),cb);cb(0);
+const ib=i=>{const o=IT[i];$("#ib").innerHTML=`<div class="cc"><div class="em" aria-hidden="true">${IE[i]}</div><h3>${o.h}</h3>${o.c}<div class="stops">${o.s.map(x=>`<div class="stop"><span class="tm">${x[0]}</span><span>${x[1]}</span></div>`).join("")}</div></div>`};
+tabs("#it",IT.map(x=>x.t),ib);ib(0);
+let ck={};try{ck=JSON.parse(localStorage.getItem("tripdone")||"{}")}catch(e){}
+const pt=()=>{let due=0;$("#pt").innerHTML=PY.map((p,i)=>{const b=p[1]-p[2];if(!ck[i])due+=b;return`<tr class="${ck[i]?"done":""}"><td><input type="checkbox" data-i="${i}" aria-label="Settled" ${ck[i]?"checked":""}></td><td>${p[0]}</td><td>${inr(p[1])}</td><td>${inr(p[2])}</td><td>${inr(b)}</td><td>${p[3]}</td></tr>`}).join("")+`<tr class="tot"><td></td><td>Still to pay</td><td></td><td></td><td>${inr(due)}</td><td>Flights ₹46,113 already paid in full</td></tr>`};
+$("#pt").onchange=e=>{ck[e.target.dataset.i]=e.target.checked;try{localStorage.setItem("tripdone",JSON.stringify(ck))}catch(x){}pt();pb()};pt();pb();
+$("#hu").innerHTML=HU.map(h=>`<li>${h}</li>`).join("");
+function ban(i){return i%3==0?'<svg class="ban" viewBox="0 0 300 70" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 70V40h30V25h25v20h20V15h28v30h24V30h30v18h25V22h26v26h30V35h62v35z" fill="rgba(24,29,38,.28)"/><circle cx="262" cy="16" r="9" fill="rgba(255,255,255,.75)"/></svg>':'<svg class="ban" viewBox="0 0 300 70" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 70L50 25l35 30 45-40 55 45 40-25 40 30 35-20v25z" fill="rgba(24,29,38,.3)"/><circle cx="262" cy="16" r="9" fill="rgba(255,255,255,.75)"/></svg>'}
+function pb(){let p=0,d=0;PY.forEach((x,i)=>{p+=ck[i]?x[1]:x[2];d+=ck[i]?0:x[1]-x[2]});$("#pb").innerHTML=[["pc","Flights paid",46113],["pm","Paid so far",p],["pu","Still to pay",d]].map(s=>`<span class="${s[0]}" style="flex:${s[2]}">${s[1]}<br><b>${inr(s[2])}</b></span>`).join("")}
+function rt(){const N=[["Mumbai","8 Nov","BOM","var(--ink)"],["Delhi","8–9 Nov","1 night","#aa2d00"],["Mussoorie","9–12 Nov","3 nights","#0a2e0e"],["Dehradun","12–14 Nov","2 nights","#d9a441"],["Gurugram","14 Nov","1 night","#fcab79"],["Navi Mumbai","15 Nov","NMI","var(--ink)"]],M=["✈","🚗","🚗","🚗","✈"];let s='<svg viewBox="0 0 960 130" role="img" aria-label="Trip route">';N.forEach((n,i)=>{const x=60+i*168;if(i<5)s+=`<line x1="${x+14}" y1="40" x2="${x+154}" y2="40" stroke="currentColor" stroke-width="2" ${i==2?'stroke-dasharray="6 6" opacity=".5"':''}/><text x="${x+84}" y="30" text-anchor="middle" font-size="18">${M[i]}</text>`;s+=`<circle cx="${x}" cy="40" r="12" style="fill:${n[3]}" stroke="currentColor"/><text x="${x}" y="82" text-anchor="middle" font-size="14" font-weight="500" fill="currentColor">${n[0]}</text><text x="${x}" y="102" text-anchor="middle" font-size="12" fill="currentColor" opacity=".75">${n[1]}</text><text x="${x}" y="120" text-anchor="middle" font-size="12" fill="currentColor" opacity=".75">${n[2]}</text>`});$("#rt").innerHTML=s+'</svg>'}
+rt();
+</script></body></html>
