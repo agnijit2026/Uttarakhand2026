@@ -68,7 +68,7 @@ input[type=checkbox]{width:20px;height:20px;accent-color:#181d26}
 .hu{display:grid;gap:12px;margin-top:24px;padding:0;list-style:none}.hu li{padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.1)}
 footer{padding:48px 0;color:var(--muted);font-size:13px}
 @media(max-width:640px){summary{flex-wrap:wrap;gap:4px 12px}details p{padding-left:16px}.k{margin-left:0}.leg{grid-template-columns:1fr 1fr}.leg .m{grid-row:2;grid-column:1/3;text-align:left}}
-@media print{nav,.row{display:none}}
+.art{width:100%;height:clamp(140px,26vw,260px);border-radius:12px;display:block;margin-top:48px}.route{background:var(--bg);border:1px solid var(--hl);border-radius:12px;padding:16px;overflow-x:auto;margin:24px 0;color:var(--ink)}.route svg{min-width:720px;width:100%;display:block}.route p{font-size:13px;color:var(--muted)}.nb{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:24px}.nb span{flex:1 1 auto;min-width:56px;padding:10px 8px;border-radius:10px;color:#181d26;font-size:12px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.nb b{font:400 20px Inter,sans-serif}#pb span{min-width:100px}.ban{display:block;width:calc(100% + 48px);height:70px;margin:-24px -24px 16px;border-radius:10px 10px 0 0}.em{font-size:30px;margin-bottom:8px;letter-spacing:6px}.m svg{display:block;margin:4px auto}@media print{nav,.row{display:none}}
 </style></head><body>
 <nav><div class="w"><b>Tarafdar trip</b><div class="l"><a href="#plan">Timeline</a><a href="#flights">Flights</a><a href="#stays">Stays</a><a href="#cabs">Cabs</a><a href="#days">Day plans</a><a href="#pay">Payments</a><a href="#notes">Heads-up</a></div><button class="btn s" style="padding:8px 16px;font-size:14px" onclick="print()">Print</button></div></nav>
 
@@ -76,7 +76,9 @@ footer{padding:48px 0;color:var(--muted);font-size:13px}
 <h1>Mumbai to Mussoorie, then home via Dehradun</h1>
 <p class="lead">8–15 November 2026 for Agnijit, Swagata and Sagnik Tarafdar. Every flight, stay and cab from your tickets, with booking IDs and what is still due.</p>
 <div class="row"><a class="btn" href="#plan">See the timeline</a><a class="btn s" href="#pay">Check payments</a></div>
-<div class="grid" style="margin-top:48px" id="stats"></div>
+<svg class="art" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of Himalayan foothills"><rect width="1200" height="260" fill="#f5e9d4"/><circle cx="930" cy="80" r="46" fill="#fcab79"/><path d="M40 90Q120 50 196 62" stroke="#181d26" stroke-dasharray="5 6" fill="none"/><path d="M200 50l60 14-60 14 12-14z" fill="#181d26"/><path d="M0 260V150l120-70 140 80 130-100 160 120 150-90 170 110 140-80 190 100v40z" fill="#a8d8c4"/><path d="M0 260V190l140-60 120 60 160-80 150 90 170-70 140 70 180-60 140 60v60z" fill="#0a2e0e"/><path d="M0 260V230l100-30 140 30 200-40 180 40 220-30 160 30 200-20v50z" fill="#181d26"/></svg>
+<div class="route"><div id="rt"></div><p>Dashed leg: no Mussoorie to Dehradun cab is in your files.</p></div>
+<div class="grid" id="stats"></div>
 </div></section>
 
 <section class="soft" id="plan"><div class="w">
@@ -90,7 +92,8 @@ footer{padding:48px 0;color:var(--muted);font-size:13px}
 </div></div></section>
 
 <section class="soft" id="stays"><div class="w">
-<h2>Where you’re staying</h2><p class="sub">Four nights are booked in three hotels, plus a Gurugram drop-off on 14 Nov.</p>
+<h2>Where you’re staying</h2><p class="sub">Six nights are booked across three hotels, plus a Gurugram drop-off on 14 Nov.</p>
+<div class="nb"><span class="pc" style="flex:1">Delhi<br><b>1</b></span><span class="pm" style="flex:3">Mussoorie<br><b>3</b></span><span class="py" style="flex:2">Dehradun<br><b>2</b></span><span class="pu" style="flex:1">Gurugram<br><b>1</b></span></div>
 <div class="grid" id="sg"></div>
 </div></section>
 
@@ -106,6 +109,7 @@ footer{padding:48px 0;color:var(--muted);font-size:13px}
 
 <section id="pay"><div class="w">
 <h2>Payments</h2><p class="sub">Tick items as you settle them. Ticks are saved in this browser only.</p>
+<div class="nb" id="pb"></div>
 <div class="tw"><table><thead><tr><th></th><th>Booking</th><th>Total</th><th>Paid</th><th>Balance</th><th>Pay to / when</th></tr></thead><tbody id="pt"></tbody></table></div>
 </div></section>
 
@@ -118,7 +122,7 @@ footer{padding:48px 0;color:var(--muted);font-size:13px}
 
 <script>
 const $=s=>document.querySelector(s),esc=x=>x;
-const KN={flight:["Flight","pc"],stay:["Stay","pm"],cab:["Cab","py"],plan:["Plan","pu"]};
+const KN={flight:["✈ Flight","pc"],stay:["🛏 Stay","pm"],cab:["🚗 Cab","py"],plan:["📍 Plan","pu"]};const IE=["💧🌷🚡🌇","🏔️🥞⛪🏡","🕳️♨️🏛️","🛕🏯🦌"];
 const EV=[
 ["Sun 8 Nov","13:00","flight","Mumbai to Delhi · Akasa Air QP 1113","Terminal 2 to Terminal 1, lands 15:20","PNR J6EJPP · Cleartrip Trip ID 260907745228 · Saver, Economy · 15 kg check-in + 7 kg cabin per person."],
 ["Sun 8 Nov","From 12:00","stay","Check in · Hotel Volga Deluxe, Mahipalpur","Family Suite, 2 king beds, balcony","Booking NH27193514856298 · Check-out Mon 9 Nov before 11:00. Pay ₹1,731 by 6 Nov 11:59 PM."],
@@ -172,15 +176,19 @@ const tl=()=>{const g={};EV.filter(e=>f=="all"||e[2]==f).forEach(e=>(g[e[0]]=g[e
 $("#flt").innerHTML=[["all","All"],["flight","Flights"],["stay","Stays"],["cab","Cabs"],["plan","Sightseeing"]].map((a,i)=>`<button class="tab" aria-pressed="${i==0}" data-f="${a[0]}">${a[1]}</button>`).join("");
 $("#flt").onclick=e=>{const b=e.target.closest("button");if(!b)return;$("#flt").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x==b));f=b.dataset.f;tl()};tl();
 const kv=a=>`<div class="kv">${a.map(x=>`<div><span>${x[0]}</span><b>${x[1]}</b></div>`).join("")}</div>`;
-const fl=i=>{const o=FL[i];$("#fb").innerHTML=o.legs.map((l,j)=>`${j&&o.lay?`<div class="lay">${o.lay}</div>`:""}<div class="leg"><div><div class="t">${l[3]}</div><b>${l[1]}</b><small>${l[2]}</small></div><div class="m">${l[0]}<small>${l[7]}</small></div><div class="e"><div class="t">${l[6]}</div><b>${l[4]}</b><small>${l[5]}</small></div></div>`).join("")+kv(o.kv)};
+const fl=i=>{const o=FL[i];$("#fb").innerHTML=o.legs.map((l,j)=>`${j&&o.lay?`<div class="lay">${o.lay}</div>`:""}<div class="leg"><div><div class="t">${l[3]}</div><b>${l[1]}</b><small>${l[2]}</small></div><div class="m">${l[0]}<svg viewBox="0 0 120 20" width="120" height="20" aria-hidden="true"><path d="M4 10H116" stroke="#fff" stroke-dasharray="4 4" opacity=".7"/><text x="52" y="16" font-size="16" fill="#fff">✈</text></svg><small>${l[7]}</small></div><div class="e"><div class="t">${l[6]}</div><b>${l[4]}</b><small>${l[5]}</small></div></div>`).join("")+kv(o.kv)};
 tabs("#ft",FL.map(x=>x.t),fl);fl(0);
-$("#sg").innerHTML=ST.map(s=>`<div class="card ${s.c}"><h3>${s.n}</h3>${s.s}<dl>${s.d.map(x=>`<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join("")}</dl><div class="due">${s.due}</div></div>`).join("");
+$("#sg").innerHTML=ST.map((s,i)=>`<div class="card ${s.c}">${ban(i)}<h3>${s.n}</h3>${s.s}<dl>${s.d.map(x=>`<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join("")}</dl><div class="due">${s.due}</div></div>`).join("");
 const cb=i=>{const o=CB[i];$("#cb").innerHTML=kv(o.kv)+`<div class="lay">${o.n}</div>`};
 tabs("#ct",CB.map(x=>x.t),cb);cb(0);
-const ib=i=>{const o=IT[i];$("#ib").innerHTML=`<div class="cc"><h3>${o.h}</h3>${o.c}<div class="stops">${o.s.map(x=>`<div class="stop"><span class="tm">${x[0]}</span><span>${x[1]}</span></div>`).join("")}</div></div>`};
+const ib=i=>{const o=IT[i];$("#ib").innerHTML=`<div class="cc"><div class="em" aria-hidden="true">${IE[i]}</div><h3>${o.h}</h3>${o.c}<div class="stops">${o.s.map(x=>`<div class="stop"><span class="tm">${x[0]}</span><span>${x[1]}</span></div>`).join("")}</div></div>`};
 tabs("#it",IT.map(x=>x.t),ib);ib(0);
 let ck={};try{ck=JSON.parse(localStorage.getItem("tripdone")||"{}")}catch(e){}
 const pt=()=>{let due=0;$("#pt").innerHTML=PY.map((p,i)=>{const b=p[1]-p[2];if(!ck[i])due+=b;return`<tr class="${ck[i]?"done":""}"><td><input type="checkbox" data-i="${i}" aria-label="Settled" ${ck[i]?"checked":""}></td><td>${p[0]}</td><td>${inr(p[1])}</td><td>${inr(p[2])}</td><td>${inr(b)}</td><td>${p[3]}</td></tr>`}).join("")+`<tr class="tot"><td></td><td>Still to pay</td><td></td><td></td><td>${inr(due)}</td><td>Flights ₹46,113 already paid in full</td></tr>`};
-$("#pt").onchange=e=>{ck[e.target.dataset.i]=e.target.checked;try{localStorage.setItem("tripdone",JSON.stringify(ck))}catch(x){}pt()};pt();
+$("#pt").onchange=e=>{ck[e.target.dataset.i]=e.target.checked;try{localStorage.setItem("tripdone",JSON.stringify(ck))}catch(x){}pt();pb()};pt();pb();
 $("#hu").innerHTML=HU.map(h=>`<li>${h}</li>`).join("");
+function ban(i){return i%3==0?'<svg class="ban" viewBox="0 0 300 70" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 70V40h30V25h25v20h20V15h28v30h24V30h30v18h25V22h26v26h30V35h62v35z" fill="rgba(24,29,38,.28)"/><circle cx="262" cy="16" r="9" fill="rgba(255,255,255,.75)"/></svg>':'<svg class="ban" viewBox="0 0 300 70" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 70L50 25l35 30 45-40 55 45 40-25 40 30 35-20v25z" fill="rgba(24,29,38,.3)"/><circle cx="262" cy="16" r="9" fill="rgba(255,255,255,.75)"/></svg>'}
+function pb(){let p=0,d=0;PY.forEach((x,i)=>{p+=ck[i]?x[1]:x[2];d+=ck[i]?0:x[1]-x[2]});$("#pb").innerHTML=[["pc","Flights paid",46113],["pm","Paid so far",p],["pu","Still to pay",d]].map(s=>`<span class="${s[0]}" style="flex:${s[2]}">${s[1]}<br><b>${inr(s[2])}</b></span>`).join("")}
+function rt(){const N=[["Mumbai","8 Nov","BOM","var(--ink)"],["Delhi","8–9 Nov","1 night","#aa2d00"],["Mussoorie","9–12 Nov","3 nights","#0a2e0e"],["Dehradun","12–14 Nov","2 nights","#d9a441"],["Gurugram","14 Nov","1 night","#fcab79"],["Navi Mumbai","15 Nov","NMI","var(--ink)"]],M=["✈","🚗","🚗","🚗","✈"];let s='<svg viewBox="0 0 960 130" role="img" aria-label="Trip route">';N.forEach((n,i)=>{const x=60+i*168;if(i<5)s+=`<line x1="${x+14}" y1="40" x2="${x+154}" y2="40" stroke="currentColor" stroke-width="2" ${i==2?'stroke-dasharray="6 6" opacity=".5"':''}/><text x="${x+84}" y="30" text-anchor="middle" font-size="18">${M[i]}</text>`;s+=`<circle cx="${x}" cy="40" r="12" style="fill:${n[3]}" stroke="currentColor"/><text x="${x}" y="82" text-anchor="middle" font-size="14" font-weight="500" fill="currentColor">${n[0]}</text><text x="${x}" y="102" text-anchor="middle" font-size="12" fill="currentColor" opacity=".75">${n[1]}</text><text x="${x}" y="120" text-anchor="middle" font-size="12" fill="currentColor" opacity=".75">${n[2]}</text>`});$("#rt").innerHTML=s+'</svg>'}
+rt();
 </script></body></html>
