@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uttarakhand Escape · 8–15 Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EFE3;--fg:#1d2a22;--card:#fffaf0;--mut:#5d6b61;--g:#1E3A2B;--t:#9C4A2B;--a:#E0A93B;--b:#14384C;--ln:#e2d9c4;--blue:#2563a8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a15;--fg:#efe9da;--card:#182720;--mut:#a3b3a8;--ln:#2a3d33;--blue:#6aa8e8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101a15;--fg:#efe9da;--card:#182720;--mut:#a3b3a8;--ln:#2a3d33;--blue:#6aa8e8;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:6px;overflow-x:auto;padding:8px 12px;background:var(--g);align-items:center}
+nav a,nav button{color:#F4EFE3;text-decoration:none;padding:10px 14px;border-radius:99px;font-size:14px;white-space:nowrap;background:none;border:0;cursor:pointer;min-height:44px}
+nav a:hover,nav button:hover{background:#ffffff22}
+.hero{background:linear-gradient(160deg,#1E3A2B,#14384C);color:#F4EFE3;padding:56px 20px 0;text-align:center;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800}
+.hero p{opacity:.85;margin:8px auto 0;max-width:560px}
+.cd{display:flex;gap:10px;justify-content:center;margin:22px 0}
+.cd div{background:#ffffff1a;backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px;min-width:64px}
+.cd b{display:block;font:800 1.6rem Fraunces,serif;color:var(--a)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0 20px}
+.btn{display:inline-block;padding:13px 22px;border-radius:99px;background:var(--a);color:#1d2a22;font-weight:700;text-decoration:none;border:0;cursor:pointer;min-height:44px;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px #0004}.btn:active{transform:scale(.96)}
+.btn.ghost{background:#ffffff1f;color:#F4EFE3}
+.btn.sm{padding:8px 14px;min-height:44px;font-size:13px}
+.hero svg{display:block;width:100%;max-width:900px;margin:0 auto}
+.dash{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3s .3s forwards}@keyframes draw{to{stroke-dashoffset:0}}
+.cloud{animation:fl 12s ease-in-out infinite alternate}@keyframes fl{to{transform:translateX(40px)}}
+.pin{cursor:pointer}.pin:hover circle{fill:#fff}
+section{max-width:980px;margin:0 auto;padding:44px 18px}
+section>h2{font-size:1.9rem;color:var(--g);margin-bottom:16px}
+:root[data-theme="dark"] section>h2{color:var(--a)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) section>h2{color:var(--a)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:16px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px #0002}
+.stat{text-align:center}.stat b{font:800 2.2rem Fraunces,serif;color:var(--t);display:block}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{padding:9px 16px;border-radius:99px;border:1px solid var(--ln);background:var(--card);color:var(--fg);cursor:pointer;min-height:44px;font:inherit}
+.chip.on{background:var(--g);color:#F4EFE3;border-color:var(--g)}
+input[type=search],textarea,input[type=text]{width:100%;padding:12px;border-radius:12px;border:1px solid var(--ln);background:var(--card);color:var(--fg);font:inherit;margin-bottom:12px}
+.day{border-left:4px solid var(--t);margin:0 0 14px;padding:0}
+.day>button{width:100%;text-align:left;background:none;border:0;color:inherit;padding:16px;cursor:pointer;display:flex;justify-content:space-between;gap:10px;font:inherit;min-height:44px}
+.day h3{font-size:1.15rem}.day small{color:var(--mut)}
+.dbody{display:none;padding:0 16px 16px}.day.open .dbody{display:block}
+.it{display:flex;gap:10px;padding:8px 0;border-top:1px dashed var(--ln)}.it span:first-child{font-size:1.2rem}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;margin:2px 4px 2px 0}
+.ok{background:#d6efdc;color:#14532d}.bl{background:#dbeafe;color:#1e40af}.am{background:#fdecc8;color:#7a4b00}.rd{background:#fde0dc;color:#9b1c1c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.bk h3{font-size:1.05rem}.bk p{margin:6px 0;color:var(--mut);font-size:14px}
+.todo{display:flex;gap:12px;align-items:flex-start}.todo input[type=checkbox]{width:24px;height:24px;margin-top:3px;accent-color:var(--g)}
+.bar{height:12px;background:var(--ln);border-radius:9px;overflow:hidden;margin:6px 0 14px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--t));width:0;transition:width .4s}
+.alert{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.alert button{background:none;border:0;font-size:20px;cursor:pointer;color:inherit;min-width:44px;min-height:44px}
+.don{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px;border-bottom:1px solid var(--ln);text-align:left}
+.pack label{display:flex;gap:10px;align-items:center;padding:8px 0;min-height:44px}.pack input{width:20px;height:20px;accent-color:var(--g)}
+footer{background:var(--g);color:#F4EFE3;text-align:center;padding:32px 18px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#1d2a22;color:#fff;padding:10px 18px;border-radius:99px;opacity:0;transition:.3s;pointer-events:none;z-index:50}
+#toast.show{opacity:1}
+.mask .sens{filter:blur(6px)}
+@media print{nav,.btns,#toast{display:none}.dbody{display:block!important}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.dash{stroke-dashoffset:0}}
+</style></head>
+<body>
+<nav><a href="#plan">Itinerary</a><a href="#bookings">Bookings</a><a href="#later">To book later</a><a href="#budget">Budget</a><a href="#pack">Packing</a><button id="theme" aria-label="Toggle dark mode">🌓</button><button id="hide" aria-label="Hide sensitive info">🙈 Hide IDs</button></nav>
+
+<header class="hero">
+<h1>⛰️ Uttarakhand Escape</h1>
+<p>8–15 November 2026 · The Tarafdar family · Mumbai → Delhi → Mussoorie → Dehradun → Delhi → Mumbai</p>
+<div class="cd" id="cd" aria-label="Countdown to departure"></div>
+<div class="btns"><a class="btn" href="#plan">View itinerary</a><a class="btn ghost" href="#bookings">Bookings</a><a class="btn ghost" href="#later">To book later</a><a class="btn ghost" href="#budget">Budget</a><a class="btn ghost" href="#pack">Packing list</a></div>
+<svg viewBox="0 0 900 260" role="img" aria-label="Route map">
+<g class="cloud" opacity=".5"><ellipse cx="150" cy="50" rx="50" ry="14" fill="#fff"/><ellipse cx="700" cy="40" rx="60" ry="15" fill="#fff"/></g>
+<path d="M0 260V190L120 130 220 200 340 110 470 210 600 120 740 200 860 140 900 170V260Z" fill="#0f2a1e" opacity=".7"/>
+<path d="M0 260V220L160 170 300 230 450 160 620 235 780 175 900 215V260Z" fill="#0b1f16"/>
+<path class="dash" d="M60 200 C150 120 220 100 300 110 S430 80 520 110 S650 170 720 120 S800 160 850 190" fill="none" stroke="#E0A93B" stroke-width="3" stroke-dasharray="8 8" style="stroke-dasharray:1200"/>
+<g id="pins" fill="#E0A93B" font-size="13" text-anchor="middle"></g>
+</svg>
+</header>
+
+<section><h2>Trip at a glance</h2><div class="stats" id="stats"></div></section>
+
+<section id="plan"><h2>Day-by-day plan</h2>
+<div class="chips" id="chips"></div>
+<input type="search" id="q" placeholder="Search places, food, flights…" aria-label="Search activities">
+<div id="days"></div></section>
+
+<section id="bookings"><h2>Bookings vault</h2><div class="grid" id="bk"></div></section>
+
+<section id="later"><h2>To book later</h2>
+<div class="bar"><i id="lbar"></i></div><p id="lcount" style="margin-top:-6px"></p>
+<div class="grid" id="todos"></div></section>
+
+<section id="budget"><h2>Budget</h2>
+<div class="card don"><svg id="donut" viewBox="0 0 120 120" width="220" height="220" role="img" aria-label="Budget donut chart"></svg><div style="flex:1;min-width:240px"><table id="btab"></table>
+<p style="color:var(--mut);font-size:14px">Uber and local sightseeing cabs are not included. Confirmed total ≈ ₹76,387 · paid ≈ ₹53,725 · still to pay ≈ ₹22,662, plus ₹499 Delhi cleaning fee and any extra km or waiting charges.</p></div></div>
+<div class="card" style="margin-top:14px"><h3>Extra expenses</h3><p style="color:var(--mut);font-size:14px">Add the Uber fare, local cabs and airport ride as you book them.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><input type="text" id="en" placeholder="Item" style="flex:2;min-width:120px"><input type="text" id="ea" placeholder="₹ amount" inputmode="numeric" style="flex:1;min-width:90px"><button class="btn sm" id="eadd" style="background:var(--g);color:#fff">Add</button></div>
+<div id="elist"></div></div>
+<h3 style="margin:22px 0 10px">Reminders</h3><div id="alerts"></div></section>
+
+<section id="pack"><h2>Packing checklist</h2><div class="bar"><i id="pbar"></i></div><div class="grid pack" id="packs"></div></section>
+
+<footer><h3>Have a wonderful trip! 🍵</h3>
+<p>MakeMyTrip support: 0124 4628747 · Perfectstayz: +91 73 5315 0111 · Akasa Air: +91 9595 333 333 · IndiGo: 0124-6173838</p>
+<div class="btns"><button class="btn" onclick="window.print()">Print / Save as PDF</button><button class="btn ghost" id="share">Share</button></div></footer>
+<div id="toast" role="status"></div>
+
+<script>
+const $=s=>document.querySelector(s),L=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},S=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)};
+const maps=q=>'https://www.google.com/maps/search/'+encodeURIComponent(q);
+const DAYS=[
+{id:'d8',d:'Sun 8 Nov',t:'Mumbai → Delhi',c:'travel stay',it:[
+['travel','✈️','Akasa Air QP-1113 · BOM T2 13:00 → DEL T1 15:20 (2h20m). PNR J6EJPP. 15 kg check-in + 7 kg cabin each. Reach the airport 3 hours early.'],
+['stay','🏨','Hotel Volga Deluxe, Mahipalpur: check-in after 12 PM, Family Suite, room only. Extra ₹499 cleaning fee at the property.']]},
+{id:'d9',d:'Mon 9 Nov',t:'Delhi → Mussoorie',c:'travel stay food',it:[
+['travel','🚗','Cab 10:30 AM from Hotel Volga → Seven Oaks, Mussoorie (Xylo/Ertiga CNG, ETA 3:49 PM, 271 km). AC off in hills; CNG refill can take 30+ min.'],
+['stay','🏨','Perfectstayz Seven Oaks, Camels Back Road: check-in from 1 PM, 3 nights, breakfast included.'],
+['sight','🌇','Optional sunset walk on Camel’s Back Road (3 km, right outside the hotel).'],['food','🍽️','Dinner on Mall Road.']]},
+{id:'d10',d:'Tue 10 Nov',t:'Kempty Cascades & Western Circuit',c:'sight food',badge:['bl','Local cab: book later'],it:[
+['sight','💦','8:30 drive to Kempty Falls (~15 km); 9:15 waterfall, pool and cable car, before the noon crowds.'],
+['sight','🌸','11:30 Company Garden: Victorian flowerbeds and a small boating lake. Back by 1:30 PM.'],
+['food','🍜','1:30 lunch at Kalsang Friends Corner or Café De Tavern.'],
+['sight','🚡','2:30 Gun Hill ropeway from Jhula Ghar; 4:30 Camel’s Back sunset walk.'],
+['food','🍫','6:30 Mall Road: souvenirs, woolens, Chic Chocolate or Lovely Omelette Centre.']]},
+{id:'d11',d:'Wed 11 Nov',t:'Landour Heritage & Everest Estate',c:'sight food',badge:['bl','Local cab: book later'],it:[
+['sight','🏔️','9:00 Lal Tibba: highest point, snow peaks through binoculars (~6 km, steep and narrow).'],
+['food','🧇','9:45 Char Dukan & St. Paul’s Church: bun-omelette, waffles, Landour Bakehouse.'],
+['sight','🏛️','11:45 Sir George Everest Estate: heritage house, museum, 360° ridge view. Back by 1 PM. Optional: Cloud’s End, 6 km further.'],
+['food','☕','Late lunch near Mall Road or Urban Turban; 3 PM shopping; 6 PM dinner at the hotel terrace.'],
+['travel','💡','Cab tip: choose a Swift/Dzire. Landour’s lanes are too steep for larger cars.']]},
+{id:'d12',d:'Thu 12 Nov',t:'Mussoorie → Dehradun',c:'travel stay sight food',badge:['bl','Uber: book later'],it:[
+['travel','🚕','11:00 AM check-out, then Uber to Dehradun (~35 km, ~1.5 h).'],
+['stay','🏨','Perfectstayz Aurevva, Salan Gaon: check-in from 1 PM, 2 nights, breakfast included.'],
+['sight','🌳','Half-day plan: Forest Research Institute (~60 min). Robber’s Cave (wet-proof shoes) if energy permits; Sahastradhara as a bonus.'],
+['food','🥟','Evening: Paltan Bazaar, Clock Tower street food, dinner on Rajpur Road.']]},
+{id:'d13',d:'Fri 13 Nov',t:'Temple, Monastery & Deer Park',c:'sight food',badge:['bl','Local cab: book later'],it:[
+['sight','🛕','9:30 Tapkeshwar Mahadev cave shrine (75 min).'],
+['sight','☸️','11:15 Mindrolling Monastery and its stupa (90 min); Tibetan cafés nearby for lunch.'],
+['sight','🦌','1:30 Malsi Deer Park (50 min). Back at the hotel by 3 PM.'],
+['food','🍛','Evening: Rajpur Road cafés, farewell dinner, maybe a Garhwali thali.']]},
+{id:'d14',d:'Sat 14 Nov',t:'Dehradun → Gurugram',c:'travel stay',it:[
+['travel','🚗','Cab 9:30 AM → Art Luxury Service Apartment, Sector 27, Gurugram (Dzire diesel, ETA 2:35 PM, 300 km). Waiting charge after 30 min: ₹300/hr.'],
+['travel','🧳','A sedan fits only 2 bags for 3 travellers. Pack light or arrange another vehicle.'],
+['stay','🏨','Night stay assumed to be the Gurugram apartment (no hotel document uploaded).']]},
+{id:'d15',d:'Sun 15 Nov',t:'Delhi → Mumbai',c:'travel',badge:['am','Leave by 1 PM'],it:[
+['travel','⏰','Leave Gurugram by ~1:00 PM; be at Delhi T3 by 2:15 PM. Airport ride: book later.'],
+['travel','✈️','IndiGo 6E 5116 DEL T3 17:15 → IXU 19:05, layover 1h55m, then 6E 6093 IXU 21:00 → NMI 21:55. PNR TBRVGW.'],
+['travel','📍','You land at Navi Mumbai Airport (NMI), not the main Mumbai airport.']]}];
+const BK=[
+['✈️','Akasa Air · Mumbai → Delhi','Trip ID 260907745228 · PNR J6EJPP','₹22,599 paid','Chhatrapati Shivaji Airport Mumbai'],
+['🏨','Hotel Volga Deluxe, Delhi','Booking NH27193514856298 · Conf 0186659584','Pay ₹1,731 online by 6 Nov 11:59 PM','Hotel Volga Deluxe Mahipalpur'],
+['🚗','Cab Delhi → Mussoorie','Booking NC733270642774582332','Total ₹5,002 · pay driver ₹3,957','Hotel Volga Deluxe Mahipalpur'],
+['🏨','Seven Oaks, Mussoorie','Reservation TAD1ZE','₹13,500 · balance ₹9,500 at hotel','Perfectstayz Premium Seven Oaks Mussoorie'],
+['🏨','Aurevva, Dehradun','Reservation SHMEUX','₹5,500 · balance ₹3,900 at hotel','Perfectstayz Premium Aurevva Dehradun'],
+['🚗','Cab Dehradun → Gurugram','Booking NCI32478387435022154','Total ₹4,541 · pay driver ₹3,574','Art Luxury Service Apartment Sector 27 Gurugram'],
+['✈️','IndiGo · Delhi → Navi Mumbai','Booking NF7ANGEJ80493131355 · PNR TBRVGW','₹23,514 paid','Indira Gandhi International Airport Terminal 3']];
+const TODO=[
+['🚕','Uber: Mussoorie → Dehradun','Thu 12 Nov, ~11:00–11:30 AM. Book on the morning; keep a local taxi number as backup.','https://www.uber.com','Open Uber'],
+['🚗','Local cab: Mussoorie Day 1','Tue 10 Nov, 8:30 AM–1:30 PM (Kempty Falls, Company Garden)'],
+['🚗','Local cab: Mussoorie Day 2','Wed 11 Nov, 8:30 AM–1:30 PM. Choose a compact hatchback or sedan.'],
+['🚗','Local cab: Dehradun','Thu 12 Nov afternoon and Fri 13 Nov, 9 AM–3 PM'],
+['⏰','Ride: Gurugram → Delhi T3','Sun 15 Nov, leave about 1:00 PM']];
+const PACK={'📄 Documents':['Photo ID for everyone','Flight tickets','Hotel vouchers'],'🧥 Winter wear':['Warm jackets','Thermals','Woollen caps and gloves'],'👟 Footwear':['Waterproof shoes for Robber’s Cave','Comfortable walking shoes'],'🔌 Electronics':['Phones and chargers','Power bank (hand baggage only)','Camera'],'💊 Medicines':['Personal prescriptions','Motion-sickness tablets for hill roads','First-aid basics']};
+const FIN=[['Flights',46113,46113,'#1E3A2B'],['Hotels',20731,5600,'#E0A93B'],['Cabs',9543,2012,'#9C4A2B']];
+const ALERTS=[['rd','Pay the Delhi hotel ₹1,731 online before 6 Nov, 11:59 PM IST.'],['am','Luggage: a sedan fits only 2 bags for 3 travellers (14 Nov).'],['am','You land at Navi Mumbai (NMI), not the main Mumbai airport.'],['am','Carry original photo ID for everyone, and cash for driver and hotel balances.'],['bl','5 rides still to arrange. See “To book later”.']];
+
+// countdown
+const tgt=new Date('2026-11-08T13:00:00+05:30');
+function tick(){let s=Math.max(0,(tgt-Date.now())/1000|0);const v=[['days',s/86400|0],['hrs',s%86400/3600|0],['min',s%3600/60|0],['sec',s%60]];$('#cd').innerHTML=v.map(x=>`<div><b>${x[1]}</b>${x[0]}</div>`).join('')}tick();setInterval(tick,1000);
+// pins
+const P=[[60,200,'Mumbai','d8'],[300,110,'Delhi','d9'],[520,110,'Mussoorie','d10'],[720,120,'Dehradun','d12'],[850,190,'Gurugram → Navi Mumbai','d14']];
+$('#pins').innerHTML=P.map(p=>`<g class="pin" onclick="go('${p[3]}')" tabindex="0"><circle cx="${p[0]}" cy="${p[1]}" r="9"/><text x="${p[0]}" y="${p[1]-16}" fill="#F4EFE3">${p[2]}</text></g>`).join('');
+function go(id){const e=$('#'+id);e.classList.add('open');e.scrollIntoView({behavior:'smooth'})}
+// stats
+const ST=[[8,'days'],[7,'nights'],[3,'flights'],[3,'hotels'],[3,'travellers'],[2,'cabs confirmed'],[5,'to book later']];
+$('#stats').innerHTML=ST.map(s=>`<div class="card stat"><b data-n="${s[0]}">0</b>${s[1]}</div>`).join('');
+document.querySelectorAll('[data-n]').forEach(e=>{let n=+e.dataset.n,i=0;const t=setInterval(()=>{e.textContent=++i;if(i>=n)clearInterval(t)},120)});
+// days
+let filt='all';const CH=[['all','All'],['travel','Travel'],['stay','Stay'],['sight','Sightseeing'],['food','Food']];
+$('#chips').innerHTML=CH.map(c=>`<button class="chip${c[0]=='all'?' on':''}" data-f="${c[0]}">${c[1]}</button>`).join('');
+$('#chips').onclick=e=>{if(e.target.dataset.f){filt=e.target.dataset.f;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c==e.target));render()}};
+$('#q').oninput=render;
+const done=L('done',{});
+function render(){const q=$('#q').value.toLowerCase();$('#days').innerHTML=DAYS.map(d=>{
+const its=d.it.filter(i=>(filt=='all'||i[0]==filt)&&(!q||(i[2]+d.t).toLowerCase().includes(q)));if(!its.length)return'';
+const open=document.getElementById(d.id)?.classList.contains('open')||q?' open':'';
+return`<article class="card day${open}" id="${d.id}"><button onclick="this.parentNode.classList.toggle('open')"><div><small>${d.d}</small><h3>${d.t}</h3>${d.badge?`<span class="badge ${d.badge[0]}">${d.badge[1]}</span>`:''}</div><span>${done[d.id]?'✅':'▾'}</span></button>
+<div class="dbody">${its.map(i=>`<div class="it"><span>${i[1]}</span><span>${i[2]} <a href="${maps(i[2].split(/[:.,(]/)[0])}" target="_blank" rel="noopener">📍</a></span></div>`).join('')}
+<button class="btn sm" style="margin-top:10px;background:var(--g);color:#fff" onclick="mark('${d.id}')">${done[d.id]?'Undo done':'Mark as done'}</button></div></article>`}).join('')||'<p>No matches.</p>'}
+function mark(id){done[id]=!done[id];S('done',done);render();document.getElementById(id).classList.add('open')}
+render();
+// bookings
+$('#bk').innerHTML=BK.map((b,i)=>`<div class="card bk"><span class="badge ok">Confirmed</span><h3>${b[0]} ${b[1]}</h3><p class="sens">${b[2]}</p><p>${b[3]}</p><button class="btn sm" style="background:var(--g);color:#fff" onclick="navigator.clipboard&&navigator.clipboard.writeText('${b[2].split(' · ')[0].replace(/^\D+ ?/,'')}');toast('Copied')">Copy ID</button> <a class="btn sm" style="background:var(--a)" target="_blank" rel="noopener" href="${maps(b[4])}">Open in Maps</a></div>`).join('');
+$('#hide').onclick=()=>{document.body.classList.toggle('mask')};
+// todos
+const td=L('todo',{});
+function rt(){$('#todos').innerHTML=TODO.map((t,i)=>`<div class="card todo"><input type="checkbox" ${td[i]?'checked':''} onchange="td[${i}]=this.checked;S('todo',td);rt()" aria-label="Mark ${t[1]} as booked"><div><span class="badge ${td[i]?'ok':'bl'}">${td[i]?'Arranged':'Book later'}</span><h3 style="font-size:1.05rem">${t[0]} ${t[1]}</h3><p style="margin:4px 0;color:var(--mut);font-size:14px">${t[2]}</p>${t[3]?`<a class="btn sm" style="background:var(--g);color:#fff" target="_blank" rel="noopener" href="${t[3]}">${t[4]}</a>`:''}</div></div>`).join('');
+const n=Object.values(td).filter(Boolean).length;$('#lbar').style.width=n/5*100+'%';$('#lcount').textContent=n+' of 5 arranged'}rt();
+// budget
+let ex=L('ex',[]);
+function rb(){const f=FIN.map(x=>x.slice()),exs=ex.reduce((a,e)=>a+e[1],0);if(exs)f.push(['Extras',exs,0,'#2563a8']);const tot=f.reduce((a,x)=>a+x[1],0);let off=0;
+$('#donut').innerHTML=`<g transform="rotate(-90 60 60)">${f.map(x=>{const l=x[1]/tot*314.16,s=`<circle cx="60" cy="60" r="50" fill="none" stroke="${x[3]}" stroke-width="18" stroke-dasharray="${l} 314.16" stroke-dashoffset="${-off}"/>`;off+=l;return s}).join('')}</g><text x="60" y="64" text-anchor="middle" font-size="11" fill="currentColor" font-weight="700">₹${tot.toLocaleString('en-IN')}</text>`;
+$('#btab').innerHTML='<tr><th></th><th>Total</th><th>Paid</th><th>Later</th></tr>'+f.map(x=>`<tr><td><span style="color:${x[3]}">●</span> ${x[0]}</td><td>₹${x[1].toLocaleString('en-IN')}</td><td>₹${x[2].toLocaleString('en-IN')}</td><td>₹${(x[1]-x[2]).toLocaleString('en-IN')}</td></tr>`).join('');
+$('#elist').innerHTML=ex.map((e,i)=>`<p>${e[0]}: ₹${e[1].toLocaleString('en-IN')} <button class="chip" onclick="ex.splice(${i},1);S('ex',ex);rb()">✕</button></p>`).join('')}
+$('#eadd').onclick=()=>{const a=+$('#ea').value.replace(/\D/g,'');if($('#en').value&&a){ex.push([$('#en').value,a]);S('ex',ex);$('#en').value=$('#ea').value='';rb()}};rb();
+// alerts
+const dis=L('dis',{});
+function ra(){$('#alerts').innerHTML=ALERTS.map((a,i)=>dis[i]?'':`<div class="alert ${a[0]=='rd'?'rd':a[0]=='am'?'am':'bl'}"><span>${a[1]}</span><button aria-label="Dismiss" onclick="dis[${i}]=1;S('dis',dis);ra()">×</button></div>`).join('')}ra();
+// packing
+const pk=L('pk',{});let all=0;
+function rp(){all=0;let c=0;$('#packs').innerHTML=Object.entries(PACK).map(([k,v])=>`<div class="card"><h3 style="font-size:1.05rem">${k}</h3>${v.map(x=>{all++;const on=pk[x];if(on)c++;return`<label><input type="checkbox" ${on?'checked':''} onchange="pk[this.dataset.k]=this.checked;S('pk',pk);rp()" data-k="${x}"> ${x}</label>`}).join('')}</div>`).join('');$('#pbar').style.width=c/all*100+'%'}rp();
+// misc
+$('#theme').onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
+$('#share').onclick=()=>{navigator.share?navigator.share({title:document.title,url:location.href}).catch(()=>{}):toast('Sharing not supported here')};
+</script></body></html>
